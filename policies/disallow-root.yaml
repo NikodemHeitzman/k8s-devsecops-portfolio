@@ -12,8 +12,16 @@ spec:
           - resources:
               kinds:
                 - Pod
+      exclude:
+        any:
+          - resources:
+              namespaces:
+                - kube-system
+                  - argocd
+                  - kyverno
+                  - trivy-system
       validate:
-        message: "DEVSCOPPS WARNING: Running containers as ROOT is strictly prohibited on this cluster! Set ‘runAsNonRoot: true’ in your manifest. (CIS Benchmark compliance)"
+        message: "DEVSECOPS WARNING: Running containers as ROOT is strictly prohibited on this cluster! Set ‘runAsNonRoot: true’ in your manifest. (CIS Benchmark compliance)"
         pattern:
           spec:
             containers:
