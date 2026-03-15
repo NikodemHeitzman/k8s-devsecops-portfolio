@@ -13,7 +13,7 @@ spec:
               kinds:
                 - Pod
       validate:
-        message: "🚨 DEVSCOPPS WARNING: Running containers as ROOT is strictly prohibited on this cluster! Set ‘runAsNonRoot: true’ in your manifest. (CIS Benchmark compliance)"
+        message: "DEVSCOPPS WARNING: Running containers as ROOT is strictly prohibited on this cluster! Set ‘runAsNonRoot: true’ in your manifest. (CIS Benchmark compliance)"
         pattern:
           spec:
             containers:
