@@ -3,7 +3,7 @@ kind: ClusterPolicy
 metadata:
   name: disallow-root-containers
 spec:
-  validationFailureAction: Enforce # Tu włączamy tryb blokowania! (Enforce zamiast Audit)
+  validationFailureAction: Audit
   background: false
   rules:
     - name: check-runasnonroot
