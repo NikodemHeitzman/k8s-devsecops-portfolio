@@ -17,9 +17,9 @@ spec:
           - resources:
               namespaces:
                 - kube-system
-                  - argocd
-                  - kyverno
-                  - trivy-system
+                - argocd
+                - kyverno
+                - trivy-system
       validate:
         message: "DEVSECOPS WARNING: Running containers as ROOT is strictly prohibited on this cluster! Set ‘runAsNonRoot: true’ in your manifest. (CIS Benchmark compliance)"
         pattern:
